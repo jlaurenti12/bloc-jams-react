@@ -1,22 +1,27 @@
 import React, { Component } from 'react';
+import './playerbar.css';
 
 class PlayerBar extends Component {
   render() {
     return (
       <section className="player-bar">
-        <section id="buttons">
+      <section id="info">
+          <img id="mini-album" src={this.props.albumCover} />
+          <div className="song-info">{this.props.song} <br /> {this.props.artist} </div>
+      </section>
+      <section id="buttons">
           <button id="previous" onClick={this.props.handlePrevClick}>
-            <span className="ion-skip-backward"></span>
+            <span><img src="../assets/images/Backward.svg"/></span>
           </button>
           <button id="play-pause" onClick={this.props.handleSongClick} >
-            <span className={this.props.isPlaying ? 'ion-pause' : 'ion-play'}></span>
+            <span><img src={this.props.isPlaying ? "../assets/images/Pause.svg" : "../assets/images/Play.svg"}/></span>
           </button>
           <button id="next" onClick={this.props.handleNextClick}>
-            <span className="ion-skip-forward"></span>
+            <span><img src="../assets/images/Forward.svg"/></span>
           </button>
-        </section>
+      </section>
         <section id="time-control">
-          <div className="current-time">{ this.props.formatTime(this.props.currentTime) }</div>
+          <div className="time-value">{ this.props.formatTime(this.props.currentTime) }</div>
           <input
             type="range"
             className="seek-bar"
@@ -26,10 +31,10 @@ class PlayerBar extends Component {
             step="0.01"
             onChange={this.props.handleTimeChange}
           />
-          <div className="total-time">{ this.props.formatTime(this.props.duration)}</div>
+          <div className="time-value">{ this.props.formatTime(this.props.duration)}</div>
         </section>
         <section id="volume-control">
-          <div className="icon ion-volume-low"></div>
+          <div><img src="../assets/images/Volume.svg"/></div>
           <input
             type="range"
             className="seek-bar"
@@ -39,7 +44,6 @@ class PlayerBar extends Component {
             step="0.1"
             onChange={this.props.handleVolumeChange}
           />
-          <div className="icon ion-volume-high"></div>
         </section>
       </section>
     );

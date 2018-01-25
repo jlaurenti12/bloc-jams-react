@@ -1,0 +1,70 @@
+.hero-content {
+    position: relative;
+    min-height: 768px;
+    background-image: url(../components/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(79,45,83,.4);
+}
+
+
+.selling-points {
+    justify-content: center;
+    position: relative;
+    font-family: Apple SD Gothic Neo;
+    color:#4F2D53;
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-column-gap: 85px;
+}
+
+@media (max-width: 900px) {
+  .selling-points {
+    justify-content: center;
+    position: relative;
+    font-family: Apple SD Gothic Neo;
+    color:#4F2D53;
+    display: grid;
+    grid-template-columns: 350px;
+    grid-column-gap: 85px;
+   }
+  }
+
+.point {
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+    opacity: 1;
+    -webkit-transform: scaleX(0.9) translateY(3rem);
+    -moz-transform: scaleX(0.9) translateY(3rem);
+    transform: scaleX(0.9) translateY(3rem);
+}
+
+.point .point-title {
+    font-size: 1.25rem;
+}
+
+.hero-content .hero-title {
+    position: absolute;
+    top: 40%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: Apple SD Gothic Neo;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    text-shadow: 1px 1px 0px rgb(58,23,63);
+}
+
+.ion-music-note,
+.ion-radio-waves,
+.ion-iphone {
+    color: #4F2D53;
+    font-size: 5rem;
+}

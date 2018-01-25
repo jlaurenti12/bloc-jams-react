@@ -1,0 +1,68 @@
+.library {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px 200px;
+  grid-column-gap: 28px;
+  grid-row-gap: 25px;
+  margin-top: 88px;
+}
+
+.library img {
+  width: 200px;
+}
+
+.albums {
+  font-family: Apple SD Gothic Neo;
+  color: #4F2D53;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+@media (max-width: 1050px) {
+  .library {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-column-gap: 28px;
+    grid-row-gap: 25px;
+    margin-top: 88px;
+  }
+}
+
+@media (max-width: 850px) {
+  .library {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-column-gap: 28px;
+    grid-row-gap: 25px;
+    margin-top: 88px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .library {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-column-gap: 28px;
+    grid-row-gap: 25px;
+    margin-top: 88px;
+  }
+}
+
+@media (max-width: 400px) {
+  .library {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 200px;
+    margin-top: 88px;
+  }
+}
+
+@media (max-width: 400px) {
+  .library img {
+    width: 250px
+  }
+}

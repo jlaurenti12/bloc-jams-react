@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums';
+import './album.css';
 import PlayerBar from './PlayerBar';
 
 class Album extends Component {
@@ -110,6 +111,7 @@ class Album extends Component {
 
   render() {
     return (
+    <section className="above-player-bar">
       <section className="album">
         <section id="album-info">
           <img id="album-cover-art" src={this.state.album.albumCover} />
@@ -132,8 +134,7 @@ class Album extends Component {
                 <td>
                   <button>
                    <span className="song-number">{ index + 1 }</span>
-                   <span className="ion-play"></span>
-                   <span className="ion-pause"></span>
+                   <span><img src={ this.state.isPlaying ? "../assets/images/List_Pause.svg"  : "../assets/images/List_Play.svg"}/></span>
                   </button>
                 </td>
                 <td>{ song.title }</td>
@@ -142,12 +143,16 @@ class Album extends Component {
             )}
           </tbody>
         </table>
+      </section>
         <PlayerBar
           isPlaying={this.state.isPlaying}
           currentSong={this.state.currentSong}
           currentTime={this.audioElement.currentTime}
           duration={this.audioElement.duration}
           volume={this.state.volume}
+          artist={this.state.album.artist}
+          albumCover={this.state.album.albumCover}
+          song={this.state.currentSong.title}
           handleSongClick={() => this.handleSongClick(this.state.currentSong)}
           handlePrevClick={() => this.handlePrevClick()}
           handleNextClick={() => this.handleNextClick()}

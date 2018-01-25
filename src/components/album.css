@@ -1,0 +1,132 @@
+/* Album */
+
+.album {
+  max-width: 800px;
+  margin: 88px auto 90px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#song-list {
+  border-collapse: collapse;
+  margin-top: 3rem;
+  width: 100%;
+  color: #4F2D53;
+  font-family: Apple SD Gothic Neo;
+  font-weight: normal;
+}
+
+#song-number-column {
+  width: 40px;
+}
+
+#song-duration-column {
+  width: 80px;
+}
+
+#album-cover-art {
+  float: left;
+  margin-right: 2rem;
+  position: relative;
+  width: 250px;
+  max-width: 33%;
+  min-width: 200px;
+}
+
+#album-info {
+  font-family: Apple SD Gothic Neo;
+  color: #4F2D53;
+  overflow: hidden;
+}
+
+#album-details {
+  float: right;
+}
+
+#album-title {
+  font-size: 30pt;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+@media (max-width: 500px) {
+  #album-info {
+    text-align: center;
+    margin: 0;
+   }
+  }
+
+  @media (max-width: 500px) {
+    #album-cover-art {
+      justify-content: center;
+      float: none;
+      margin-right: 0;
+     }
+    }
+
+
+tr {
+  border-bottom: 0.1px solid #5F4063;
+}
+
+tr:hover {
+  background: hsla(0, 0%, 0%, 0.05);
+  cursor: pointer;
+}
+
+tr img {
+  display: none;
+}
+
+tr:hover img {
+  display: block;
+}
+
+tr:hover .song-number {
+  display: none;
+}
+
+
+tr:last-child {
+  border: none;
+}
+
+td {
+  padding: 0.75rem;
+}
+
+tr button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer
+}
+
+tr button:focus {
+  outline: none;
+  text-shadow: 2px 4px 3px hsla(0,0%,0%,0.25);
+}
+
+tr button:focus .song-number {
+  display: none;
+}
+tr button:focus .play {
+  display: block;
+}
+
+tr.playing button:focus .song-number,
+tr.playing button:focus .play {
+  display: none;
+}
+tr.playing button:focus .pause {
+  display: block;
+}
+
+.song-number {
+  font-family: Apple SD Gothic Neo;
+  color: #4F2D53;
+}
+
+.song-duration {
+  text-align: right;
+}
