@@ -74,18 +74,21 @@ tr:hover {
   cursor: pointer;
 }
 
-tr img {
+tr .play {
   display: none;
 }
 
-tr:hover img {
+tr:hover .play {
+  display: block;
+}
+
+tr:hover .pause {
   display: block;
 }
 
 tr:hover .song-number {
   display: none;
 }
-
 
 tr:last-child {
   border: none;

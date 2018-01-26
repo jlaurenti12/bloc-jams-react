@@ -133,8 +133,9 @@ class Album extends Component {
             <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
                 <td>
                   <button>
-                   <span className="song-number">{ index + 1 }</span>
-                   <span><img src={ this.state.isPlaying ? "../assets/images/List_Pause.svg"  : "../assets/images/List_Play.svg"}/></span>
+                   <span className="song-number">{ (this.state.isPlaying && song === this.state.currentSong) ? null : index + 1 }</span>
+                   <img className="pause" src={ (this.state.isPlaying && song === this.state.currentSong) ? "../assets/images/List_Pause.svg": null}/>
+                   <img className="play" src={ (this.state.isPlaying && song === this.state.currentSong) ? null : "../assets/images/List_Play.svg"}/>
                   </button>
                 </td>
                 <td>{ song.title }</td>
