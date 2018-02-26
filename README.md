@@ -1,5 +1,5 @@
 ## Bloc Jams React
-This is a version of [BlocJams](https://github.com/jlaurenti12/bloc-jams-react) written using ES2015 and React. It uses React components to create relatively self-contained, re-usable modules of an application and unites them in a way that is descriptive. The end-product is an even more visually appealing site that is quite maintainable at the same time.
+BlocJams is a website built with ReactJS for streaming music. It allows users to browse a music collection, navigate to an album and play a specific song. It was written using ES2015 and React. 
 
 ## React
 React is a JavaScript library that provides a paradigm by which to develop component-based web sites and applications. Rather than working with HTML files, React abstracts away this part of web page development by providing you with [JSX](https://reactjs.org/docs/introducing-jsx.html) an extension of JavaScript which allows you to write semantic content that will be rendered as HTML in the DOM. This 'virtual DOM' can facilitate constructing (somewhat) self-contained and highly reusable segments of your site/app.
