@@ -1,7 +1,7 @@
 ## Bloc Jams React
 This is a version of [BlocJams](https://github.com/jlaurenti12/bloc-jams-react) written using ES2015 and React. It uses React components to create relatively self-contained, re-usable modules of an application and unites them in a way that is descriptive. The end-product is an even more visually appealing site that is quite maintainable at the same time.
 
-# React
+## React
 React is a JavaScript library that provides a paradigm by which to develop component-based web sites and applications. Rather than working with HTML files, React abstracts away this part of web page development by providing you with [JSX](https://reactjs.org/docs/introducing-jsx.html) an extension of JavaScript which allows you to write semantic content that will be rendered as HTML in the DOM. This 'virtual DOM' can facilitate constructing (somewhat) self-contained and highly reusable segments of your site/app.
 
 In addition to the component model, React also operates on the principal of ['state' management](https://reactjs.org/docs/state-and-lifecycle.html). Components receive 'state' information from their inherited context and 'properties'. They can also respond dynamically as that state changes. To accomplish this, you simply need to inject the proper logic into the Component lifecycle. Managing state can take some getting used to, and requires you to make some design decisions in order to share 'state' within the right scope and in the right way.
